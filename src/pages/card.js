@@ -1,26 +1,85 @@
 import React from "react";
 import HeartImg from "../assets/images/heart.png";
 
-export function Card () {
+
+export function Card() {
+
+    const container = {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    }
+
+    const card = {
+        transformStyle: 'preserve-3d',
+        minHeight: '80vh',
+        width: '35rem',
+        borderRadius: '30px',
+        padding: '0rem 5rem',
+        boxShadow: '0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2)',
+    }
+
+    const heart = {
+        minHeight: '35vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    }
+
+    const heartImg = {
+        width: '10rem',
+        zIndex: 2,
+        transition: 'all 0.75s ease - out',
+    }
+
+    const circle = {
+        width: '15rem',
+        height: '15rem',
+        backgroundImage: 'linear-gradient(to right, rgba(245, 70, 66, 0.75), rgba(8, 83, 156, 0.75))',
+        position: 'absolute',
+        borderRadius: '50%',
+        zIndex: '1',
+    }
+
+    const info = {
+        fontSize: '3rem',
+        textAlign: 'center',
+        transition: 'all 0.75s ease - out',
+    }
+
+    const title = {
+        padding: '2rem 0rem',
+        color: '#585858',
+        fontWeight: 'lighter',
+        textAlign: 'center',
+        transition: 'all 0.75s ease - out',
+    }
+
+
+
 
     return (
-        <div class="w-2/5 flex justify-center items-center">
-            <div class="bg-white rounded-lg shadow-2xl">
-                <div class="p-16">
-                    <div>
-                        <img src={HeartImg} alt="heart" />
+
+            <div style={container}>
+                <div style={card}>
+                    <div style={heart}>
+                        <div style={circle} />
+                        <img src={HeartImg} style={heartImg} alt="heart" />
                     </div>
-                    <div class="mt-8 text-center">
-                        <h1 class="font-bold text-lg text-gray-700 mb-1">Quote11 of the Day</h1>
-                        <p class="text-gray-600">“I like this girl, as much as she LOVES me.” – GOKU !!</p>
-                        <button class="mt-6 bg-blue-500 hover:bg-blue-400 text-white rounded-full px-12 py-3 shadow-xl focus:outline-none">
-                            LOVE
-                        </button>
+                    <div style={info}>
+                        <h1>Quote of the Day</h1>
+                        <h3 style={title}>“I like this girl, as much as she LOVES me.” – GOKU !!</h3>
+                        <div class="love-btn">
+                      
+                    
+                     
+
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
     )
-    
+
 }
 
