@@ -1,5 +1,5 @@
 import React from "react";
-import HeartImg from "../assets/images/heart.png";
+import BitcoinImg from "../assets/images/bitcoin.png";
 
 
 export function Card() {
@@ -9,6 +9,7 @@ export function Card() {
         justifyContent: 'center',
         alignItems: 'center',
     }
+    
 
     const card = {
         transformStyle: 'preserve-3d',
@@ -26,7 +27,7 @@ export function Card() {
         justifyContent: 'center',
     }
 
-    const heartImg = {
+    const bitcoinImg = {
         width: '10rem',
         zIndex: 2,
         transition: 'all 0.75s ease - out',
@@ -53,10 +54,7 @@ export function Card() {
         fontWeight: 'lighter',
         textAlign: 'center',
         transition: 'all 0.75s ease - out',
-    }
-
-
-
+    };
 
     return (
 
@@ -64,11 +62,10 @@ export function Card() {
                 <div style={card}>
                     <div style={heart}>
                         <div style={circle} />
-                        <img src={HeartImg} style={heartImg} alt="heart" />
+                    <img src={BitcoinImg} style={bitcoinImg} alt="heart" />
                     </div>
                     <div style={info}>
-                        <h1>Quote of the Day</h1>
-                        <h3 style={title}>“I like this girl, as much as she LOVES me.” – GOKU !!</h3>
+                        <h3 style={title}>“Just Bougth It.” !! BITCOIN !!</h3>
                         <div class="love-btn">
                       
                     
@@ -80,6 +77,5 @@ export function Card() {
             </div>
 
     )
-
 }
 
